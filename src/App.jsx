@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <h1 className='text-5xl font-bold'>Hello wp-ginbjgnffd</h1>
+      <h1 className='text-5xl font-bold'>Hello WORLD bruuuuuuuuuuuh</h1>
     </>
   )
 }
