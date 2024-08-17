@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 
@@ -36,15 +36,31 @@ const catButtons = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const location = useLocation()
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  //==============================================|| To auto close the nav bar onChange of screen width and route change
+  useEffect(() => {
+
+    const handleCloseNavBar = () => {
+      setIsMenuOpen(false)
+    }
+
+    window.addEventListener('resize', handleCloseNavBar);
+    setIsMenuOpen(false);
+
+    return () => window.removeEventListener('resize', handleCloseNavBar);
+
+  }, [location])
+
+
   return (
     <>
-      <header className=" relative bg-white-500 px-4 lg:px-8 text-black border-b">
+      <header className="sticky top-0 bg-white-500 px-4 lg:px-8 text-black border-b z-50 bg-white">
         <div className=" flex items-center justify-between">
           {/* Logo */}
           <div className="text-xl font-bold py-3 lg:py-0">
-            <Link to="/">Maverick</Link>
+            <Link to="/">Logo</Link>
           </div>
 
           {/* Burger Icon */}
@@ -85,7 +101,7 @@ const Header = () => {
         isMenuOpen &&
         // <div className=' inset-x-0 bg-gray-300 max-h-screen w-full '>
         <div
-          className='lg:hidden fixed top-[52px] inset-0 z-40 transform 
+          className='lg:hidden fixed top-[52px] inset-0 z-50 transform 
           transition-transform duration-300 ease-in-out 
           w-full  bg-white border-t p-4'
 
