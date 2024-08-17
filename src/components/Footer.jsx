@@ -39,7 +39,7 @@ const footerLinks = [
       { name: "footer sub nav 44", url: "#" },
     ]
   },
- 
+
 ]
 
 const Footer = () => {
@@ -53,9 +53,10 @@ const Footer = () => {
           <div className="w-full sm:w-[60%] md:w-[50%] lg:w-[28%] flex flex-col gap-2">
             <Link className='text-xl font-bold' to="/">Logo</Link>
             <p>company provides reliable and secure DevOps solutions, optimizing tech operations for businesses.</p>
+            <h2 className='font-semibold'> Social links here</h2>
           </div>
           <div className=" mt-16 grid grid-cols-2 w-full md:grid-cols-4 gap-8 xl:col-span-2 lg:mt-0 md:justify-items-stretch">
-            {footerLinks&&footerLinks?.map(nav => (
+            {footerLinks && footerLinks?.map(nav => (
               <div key={nav?.category} className="min-w-[100px]">
                 <p className="text-sm font-semibold text-gray-900">
                   {nav.category}
