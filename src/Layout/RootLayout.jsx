@@ -8,9 +8,9 @@ const RootLayout = () => {
     <>
       <Header />
       <main className='bg-white px-6'>
-        <Outlet />
+        {/* <Outlet /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
