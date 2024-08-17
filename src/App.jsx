@@ -1,11 +1,35 @@
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  createRoutesFromElements,
+} from "react-router-dom";
+import RootLayout from "./Layout/RootLayout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Home />} />
+      <Route
+        path="about"
+        element={<About />}
+      />
+      <Route
+        path="contact"
+        element={<Contact />}
+      />
+    </Route>
+  )
+)
 
 function App() {
 
   return (
-    <>
-      <h1 className='text-5xl font-bold'>Hello WORLD develop branch</h1>
-    </>
+      <RouterProvider router={router} />
   )
 }
 
