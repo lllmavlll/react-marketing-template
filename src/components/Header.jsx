@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
+import Button from './UI/Button'
 
 
 const navs = [
@@ -26,11 +27,13 @@ const catButtons = [
     name: 'requestADemo',
     to: '#',
     label: 'Request a demo',
+    variant: 'secondary',
   },
   {
     name: 'signup',
     to: '/signup',
     label: 'SignUp',
+    variant: 'primary',
   },
 ]
 
@@ -77,7 +80,7 @@ const Header = () => {
           {/* Navigation Menu */}
           <nav className='hidden lg:flex h-full '>
             {navs && navs?.map(nav => (
-              <Link key={nav?.name} to={nav?.to} className=" h-auto p-4 text-black hover:text-underline hover:bg-gray-200 duration-300 text-sm font-medium">
+              <Link key={nav?.name} to={nav?.to} className=" h-auto p-4 text-black hover:underline duration-300 text-base font-medium">
                 {nav?.label}
               </Link>
             ))}
@@ -86,10 +89,11 @@ const Header = () => {
           {/* CTA buttons */}
           <div className='hidden lg:flex gap-4 '>
             {catButtons && catButtons?.map(button => (
-              <Link key={button?.name} to={button?.to}>
-                <button >
-                  {button?.label}
-                </button>
+              <Link className='my-2' key={button?.name} to={button?.to}>
+                <Button
+                name={button?.label}
+                  variant={button?.variant || 'primary'}
+                />
               </Link>
             ))}
           </div>
@@ -99,7 +103,6 @@ const Header = () => {
       {/* nav menu in small screen */}
       {
         isMenuOpen &&
-        // <div className=' inset-x-0 bg-gray-300 max-h-screen w-full '>
         <div
           className='lg:hidden fixed top-[52px] inset-0 z-50 transform 
           transition-transform duration-300 ease-in-out 
