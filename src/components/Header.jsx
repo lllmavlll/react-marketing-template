@@ -32,7 +32,7 @@ const catButtons = [
   {
     name: 'signup',
     to: '/signup',
-    label: 'SignUp',
+    label: 'Sign up',
     variant: 'primary',
   },
 ]
@@ -91,7 +91,7 @@ const Header = () => {
             {catButtons && catButtons?.map(button => (
               <Link className='my-2' key={button?.name} to={button?.to}>
                 <Button
-                name={button?.label}
+                  name={button?.label}
                   variant={button?.variant || 'primary'}
                 />
               </Link>
@@ -104,19 +104,41 @@ const Header = () => {
       {
         isMenuOpen &&
         <div
-          className='lg:hidden fixed top-[52px] inset-0 z-50 transform 
+          className='lg:hidden fixed top-[52px] inset-y-0 z-50 transform 
           transition-transform duration-300 ease-in-out 
-          w-full  bg-white border-t p-4'
+          w-full border-t p-4 bg-white overflow-y-auto'
 
         >
-          <div className='flex flex-col'>
-            {navs && navs?.map(nav => (
-              <Link key={nav?.name} to={nav?.to}
-                className='text-black text-sm font-medium'
-              >
-                {nav?.label}
-              </Link>
-            ))}
+          <div className="h-full duration-0 flex flex-col justify-between">
+            <div className='w-full'>
+              <div className='flex flex-col gap-4 pb-8 border-b '>
+                {catButtons && catButtons?.map(button => (
+                  <Button
+                    key={button?.label}
+                    name={button?.label}
+                    variant={button?.variant}
+                  />
+                ))}
+              </div>
+              <div className='flex flex-col pt-4'>
+
+                {navs && navs?.map(nav => (
+                  <Link key={nav?.name} to={nav?.to}
+                    className='text-black text-sm font-medium'
+                  >
+                    <p className='hover:bg-gray-200 py-1.5 px-2 rounded-md duration-300 font-semibold text-sm'>
+                      {nav?.name}
+                    </p>
+                  </Link>
+                ))}
+
+              </div>
+            </div>
+            <div className=" mt-10pt-8 sm:mt-10 lg:mt-12 text-center ">
+              <p className="text-xs leading-5 text-gray-800 ">
+                &copy; 2024 Your Company, Inc. All rights reserved
+              </p>
+            </div>
           </div>
         </div>
       }
