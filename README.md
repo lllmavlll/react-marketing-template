@@ -1,8 +1,41 @@
-# React + Vite
+# React Marketting template
+This is a template for creating React applications with a modern folder structure, pre-installed packages, and commonly used components. It serves as a blueprint to kickstart your React projects with ease and consistency. The template includes configurations for Tailwind CSS, Context API, Redux, routing, and a collection of reusable components like Header, Footer, Button, and Card.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- **React.js**: A powerful JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **Context API**: Manage and share state across the application without prop drilling.
+- **Redux**: A predictable state container for JavaScript apps.
+- **React Router**: Declarative routing for React applications.
+- **Reusable Components**: Pre-built components like Header, Footer, Button, and Card to speed up development.
+- **Modern Folder Structure**: Organized layout for scalability and maintainability.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
+
+Follow these instructions to set up and run the template locally.
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/lllmavlll/react-marketing-template.git
+
+2. **Navigate to the project directory:**
+  
+   ```bash
+    cd react-marketting-template
+
+3. **Install dependencies:**
+
+    Using npm: 
+   ```bash
+    npm install
+  
+
