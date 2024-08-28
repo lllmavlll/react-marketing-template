@@ -34,8 +34,59 @@ Follow these instructions to set up and run the template locally.
 
 3. **Install dependencies:**
 
-    Using npm: 
+
    ```bash
     npm install
   
+## Usage
+1. Start the development server:
+   
+   ```bash
+   npm Start
+
+2. Open your browser and navigate to:
+
+   ```bash
+   http://localhost:3000
+   ```
+The application will automatically reload if you make changes to the code.
+
+## Building for Production
+To create a production build of your app:
+
+   ```bash
+   npm run build
+   ```
+The production-ready build will be available in the `build` folder.
+
+## Folder Structure
+
+   ```bash
+   src/
+   |
+   ├── assests/           # for storing images and more static files
+   │
+   ├── components/        # Reusable components like Button, Card, etc.
+   │
+   ├── context/           # Context API setup
+   │
+   ├── redux/             # Redux store, actions, reducers
+   │
+   ├── pages/             # Application pages for routing
+   │
+   ├── Layout/            # contains page layouts
+   │
+   ├── utils/             # Utilities
+   │
+   └── App.jsx            # Main application component
+   └── main.jsx           # Entry point of the application
+   ```
+## Contributing
+Contributions are welcome! Feel free to submit a pull request or open an issue if you have suggestions or improvements.
+
+## Author
+Created By [Mahesh KN](https://www.linkedin.com/in/mahesh-k-n-732121251/)
+
+
+
 
