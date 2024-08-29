@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import Button from './UI/Button'
+import { UserAuth } from '../contexts/ContextAPI'
 
 
 const navs = [
@@ -38,6 +39,8 @@ const catButtons = [
 ]
 
 const Header = () => {
+
+  const { userName } = UserAuth()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation()
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -72,7 +75,6 @@ const Header = () => {
             className="lg:hidden flex items-center px text-black border-white hover:text-gray-300 hover:border-gray-300"
           >{isMenuOpen ?
             <XMarkIcon className='h-6 w-6 text-black' /> :
-
             <Bars3Icon className='h-6 w-6 text-black' />
             }
           </button>
