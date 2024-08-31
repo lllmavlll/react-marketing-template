@@ -18,7 +18,6 @@ Follow these instructions to set up and run the template locally.
 ### Prerequisites
 
 - Node.js (version 14 or higher)
-- npm or yarn
 
 ### Installation
 
