@@ -1,4 +1,4 @@
-# React Marketting template
+# React template
 This is a template for creating React applications with a modern folder structure, pre-installed packages, and commonly used components. It serves as a blueprint to kickstart your React projects with ease and consistency. The template includes configurations for Tailwind CSS, Context API, Redux, routing, and a collection of reusable components like Header, Footer, Button, and Card.
 
 ## Features
