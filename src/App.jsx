@@ -8,6 +8,7 @@ import RootLayout from "./Layout/RootLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import CustomErrorPage from "./components/UI/CustomErrorPage";
 
 
 const router = createBrowserRouter(
@@ -22,6 +23,10 @@ const router = createBrowserRouter(
         path="contact"
         element={<Contact />}
       />
+      <Route
+        path="*"
+        element={<CustomErrorPage />}
+      />
     </Route>
   )
 )
@@ -29,7 +34,7 @@ const router = createBrowserRouter(
 function App() {
 
   return (
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
   )
 }
 
