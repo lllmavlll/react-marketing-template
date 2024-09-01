@@ -25,7 +25,7 @@ const Button = ({
 
   return (
     <button onClick={onClick}
-      className={`${customClass || `px-2.5 py-1 rounded-md text-sm font-semibold ${buttonVariant(variant)}`}`}>
+      className={`${customClass || `px-3 py-1.5 rounded-md text-sm font-semibold active:scale-95 ${buttonVariant(variant)}`}`}>
       {name}
     </button>
   )
